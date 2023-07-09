@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: none !important;
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url("../Assets/fonts/Vazir.eot");
+    src: url("../Assets/fonts/Vazir.woff2") format("woff2"),
+        url("../Assets/fonts/Vazir.woff") format("woff"),
+}
+
+:root {
+    --bg: rgb(33, 37, 41);
+    --text: rgb(248, 249, 250);
+    --primary: rgb(41, 16, 157);
+}
+
+body {
+    font-family: 'Vazir';
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.main {
+    scroll-behavior: smooth;
+}
+
+.main section {
+    direction: rtl;
+    margin: 2rem 0 5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e03400;
+    border: none;
+}
+
+h1 {
+    background: -webkit-linear-gradient(var(--primary), var(--text));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* cursor ------------------------------------- */
+
+.cursor-main {
+    position: relative;
+    pointer-events: none;
+    filter: contrast(1);
+    z-index: 99;
+}
+
+.cursor {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.point {
+    width: 7px;
+    height: 7px;
+    background-color: var(--text);
+}
+
+.round {
+    border: 2px solid var(--text);
+    transform: translate(-11.5px, -12px);
+    width: 30px;
+    height: 30px;
+    transition: all .3s linear;
+}
+
+/* FlashLight */
+
+.flashlight {
+    position: absolute;
+    display: none;
+    top: -25px;
+    left: -20px;
+    width: 50px;
+    height: 50px;
+    z-index: 0 !important;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px 40px #ffffff;
+    background-color: #fff;
+}
+
+/* ability--------------------------------- */
+.collapse-bg {
+    width: 10rem;
+    height: 3.5rem;
+    border: 1px solid #464646;
+}
+
+.collapse.collapse-horizontal {
+    height: 100%;
+}
+
+.card.card-body {
+    height: 100%;
+    padding: 1rem .5rem;
+}
+
+/* Loader--------------------------------- */
+#loader-main {
+    position: absolute;
+    background-color: #b3b3b3;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+}
+
+#loader {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: -32px;
+    border-radius: 50%;
+    color: #fff;
+    background: currentColor;
+    box-shadow: 32px 0, -32px 0, 64px 0;
+}
+
+#loader::after {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background: #FF3D00;
+    animation: move 2s linear infinite alternate;
+}
+
+@keyframes move {
+
+    0%,
+    5% {
+        left: -32px;
+        width: 16px;
+    }
+
+    15%,
+    20% {
+        left: -32px;
+        width: 48px;
+    }
+
+    30%,
+    35% {
+        left: 0px;
+        width: 16px;
+    }
+
+    45%,
+    50% {
+        left: 0px;
+        width: 48px;
+    }
+
+    60%,
+    65% {
+        left: 32px;
+        width: 16px;
+    }
+
+    75%,
+    80% {
+        left: 32px;
+        width: 48px;
+    }
+
+    95%,
+    100% {
+        left: 64px;
+        width: 16px;
+    }
+}
+
+/* scrollbar--------------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #464646;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #707070;
+}
+
+/* switch ------------------------------------- */
+/* mode */
+.checkbox-mode-wrapper #switch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.checkbox-mode-wrapper label {
+    width: 6.5rem;
+    height: 3.5rem;
+    background: grey;
+    border-radius: 100px;
+    position: relative;
+}
+
+.checkbox-mode-wrapper label:after {
+    content: '';
+    position: absolute;
+    top: .25rem;
+    left: .25rem;
+    width: 3rem;
+    height: 3rem;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.checkbox-mode-wrapper #switch:checked+label {
+    background: #bdbdbd;
+}
+
+.checkbox-mode-wrapper #switch:checked+label:after {
+    transform: translateX(100%);
+}
+
+/* flashlight */
+.checkbox-flashlight-wrapper {
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+
+.checkbox-flashlight-wrapper input[type="checkbox"] {
+    opacity: 0;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+}
+
+.checkbox-flashlight-wrapper input[type="checkbox"]+label {
+    background: url('../Assets/imgs/icons8-flash-light-100.png') no-repeat;
+    background-size: 3.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.checkbox-flashlight-wrapper input[type="checkbox"]:checked+label {
+    background: url('../Assets/imgs/icons8-flash-light-100-light.png') no-repeat;
+    filter: invert(1);
+    background-size: 3.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* list--------------------------------------- */
+.hover-list,
+.active {
+    position: relative;
+    transition: all .2s linear;
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 1rem .5rem 1rem 3rem;
+    box-shadow: gray 10px 20px 30px 0px;
+}
+
+.active {
+    color: #fff !important;
+}
+
+/* Image ------------------------------------- */
+.images-section {
+    display: grid;
+}
+
+.card-img-back {
+    position: absolute;
+    visibility: hidden;
+    transition: all .5s ease-in;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.card:hover .card-img-back {
+    background-color: black;
+    visibility: visible;
+    opacity: .8;
+}
+
+/* effects ------------------------------------- */
+/* wave ------------------ */
+.wave {
+    pointer-events: none;
+}
+
+/* gears ------------------ */
+.gear img {
+    height: 8rem;
+}
+
+/* large ------------------------------------- */
+@media (min-width:990px) {
+    body {
+        overflow: hidden;
+    }
+
+    .main {
+        border: 2px solid gray;
+        height: 90vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transform: skewX(-4deg) translateX(4rem) scaleX(1.05);
+        box-shadow: gray 30px 30px 40px 0px;
+    }
+
+    /* list--------------------------------------- */
+
+    .hover-list:hover {
+        color: #fff !important;
+    }
+
+    .hover-list:hover::after {
+        content: "";
+        position: absolute;
+        left: -1rem;
+        top: 0;
+        width: 4rem;
+        height: 100%;
+        background-color: var(--primary);
+        transform: skewX(-20deg);
+        animation: list-hover .5s linear;
+    }
+
+    @keyframes list-hover {
+
+        0%,
+        50% {
+            left: -1.5rem;
+        }
+
+        50%,
+        70% {
+            left: -3rem;
+        }
+
+        100% {
+            left: -1.5rem;
+        }
+    }
+
+    .gear {
+        & img {
+            position: absolute;
+            bottom: 0;
+            right: -4rem;
+        }
+
+        & #gear {
+            right: 3.5rem;
+        }
+
+        & #gear::after {
+            content: "";
+        }
+
+    }
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wave.css">
+    <title>Porfilio</title>
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div class="d-flex justify-content-center align-items-center" id="loader-main">
+        <span id="loader"></span>
+    </div>
+    <!-- cursor -->
+    <div class="flashlight"></div>
+    <div class="cursor-main">
+        <div class="cursor round"></div>
+        <div class="cursor point"></div>
+    </div>
+
+    <!-- main -->
+    <div class="container-fluid pt-lg-3 pt-md-2">
+        <div class="row g-md-3 g-lg-0 flex-row-reverse text-end">
+
+            <!-- Side nav -->
+            <header class="col-lg-3 col-md-12 align-self-center">
+                <!-- light switch -->
+                <div class="lamp d-flex justify-content-lg-end justify-content-sm-center mb-4">
+                    <div class="checkbox-flashlight-wrapper me-3 d-sm-none d-lg-inline">
+                        <div id="light-div">
+                            <input type="checkbox" id="light">
+                            <label></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-mode-wrapper">
+                        <input type="checkbox" id="switch">
+                        <label for="switch"></label>
+                    </div>
+                </div>
+
+                <!-- list -->
+                <ul class="list-unstyled fs-1 fw-bold d-flex d-lg-block justify-content-between">
+                    <li>
+                        <a class="hoverable info" href="#info">اطلاعات</a>
+                    </li>
+                    <li class="py-lg-5">
+                        <a class="hoverable ability" href="#ability">توانایی</a>
+                    </li>
+                    <li>
+                        <a class="hoverable gallery" href="#gallery">گالری</a>
+                    </li>
+                    <li class="pt-lg-5">
+                        <a class="hoverable contact" href="# ">تماس با من</a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- body -->
+            <div class="col-lg-9 main p-0">
+                <!-- info------------------------------->
+                <section id="info" class="container-fluid">
+                    <h1 class="fs-1 mb-3 fw-bold">اطلاعات</h1>
+                    <div class="row">
+                        <img class="col-md-2 info-img img-fluid" id="img"
+                            src="Assets/imgs/svgs/1Smiley_face_Flatline.png" alt="Smiley_face">
+                        <div class="col-md-10 row fs-5">
+                            <div class="col-md-4 col-sm-3">
+                                <p class="fw-bold">مهدی حسینی</p>
+                                <p>برنامه نویس وب</p>
+                            </div>
+                            <div class="col-md-4 col-sm-3">
+                                <p class="fw-bold">سن :</p>
+                                <p>22</p>
+                            </div>
+                            <div class="col-md-4 col-sm-3">
+                                <p class="fw-bold">شهر :</p>
+                                <p>مشهد</p>
+                            </div>
+                            <div class="col-md-4 col-sm-3 text-center">
+                                <p class="fw-bold">شماره همراه :</p>
+                                <p>09395829429</p>
+                            </div>
+                            <div class="col-md-4 col-sm-3 text-center">
+                                <p class="fw-bold">دانشگاه :</p>
+                                <p>جهاد دانشگاهی</p>
+                            </div>
+                            <div class="col-md-4 col-sm-3 text-center">
+                                <p class=" fw-bold">مقطع :</p>
+                                <p>کارشناسی</p>
+                            </div>
+                            <div class="col-md-4 col-sm-3 text-start">
+                                <p class="fw-bold">رشته :</p>
+                                <p>مهندسی نرم افزار</p>
+                            </div>
+                            <div class="col-md-4 col-sm-3 text-start">
+                                <p class="fw-bold">گرایش :</p>
+                                <p>برنامه نویسی سایت</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ability------------------------------->
+                <section id="ability" class="container-fluid">
+                    <h1 class="fs-1 mb-3 fw-bold">توانایی</h1>
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-3 col-sm-4 d-flex">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#HTML" aria-expanded="false" aria-controls="collapseWidthExample">
+                                HTML & Css
+                            </button>
+                            <div class="collapse-bg border border-secondary">
+                                <div class="collapse collapse-horizontal" id="HTML">
+                                    <div class="card card-body bg-body-secondary" style="width: 10rem;">
+                                        100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 d-flex">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#JavaScript" aria-expanded="false" aria-controls="collapseWidthExample">
+                                JavaScript
+                            </button>
+                            <div class="collapse-bg border border-secondary">
+                                <div class="collapse collapse-horizontal" id="JavaScript">
+                                    <div class="card card-body bg-body-secondary" style="width: 4rem;">
+                                        40%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 d-flex">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#jquery" aria-expanded="false" aria-controls="collapseWidthExample">
+                                jquery
+                            </button>
+                            <div class="collapse-bg border border-secondary">
+                                <div class="collapse collapse-horizontal" id="jquery">
+                                    <div class="card card-body bg-body-secondary" style="width: 9rem;">
+                                        90%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 d-flex">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Nodejs" aria-expanded="false" aria-controls="collapseWidthExample">
+                                Nodejs
+                            </button>
+                            <div class="collapse-bg border border-secondary">
+                                <div class="collapse collapse-horizontal" id="Nodejs">
+                                    <div class="card card-body bg-body-secondary" style="width: 8rem;">
+                                        80%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 d-flex">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#bootstrap" aria-expanded="false" aria-controls="collapseWidthExample">
+                                bootstrap
+                            </button>
+                            <div class="collapse-bg border border-secondary">
+                                <div class="collapse collapse-horizontal" id="bootstrap">
+                                    <div class="card card-body bg-body-secondary" style="width: 10rem;">
+                                        100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- gallery------------------------------->
+                <section id="gallery" class="container-fluid">
+                    <h1 class="fs-1 mb-3 fw-bold">گالری</h1>
+                    <div class="text-center">
+                        <div>
+                            <p class="btn btn-secondary p-3 filter">گواهینامه</p>
+                            <p class="btn btn-secondary p-3 filter">نمونه کار</p>
+                            <p class="btn btn-secondary p-3" id="filter-all">همه</p>
+                            <hr>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card text-bg-dark">
+                                    <img class="card" src="Assets/imgs/Certificates/css-Certificate.jpg" alt="css-Cer">
+                                    <div class="card-img-back">
+                                        <h5 class="card-title">گواهینامه</h5>
+                                        <p class="card-text">CSS</p>
+                                        <p class="card-text">این گواهینامه برای تمام کردن دوره css.</p>
+                                        <p class="card-text"> از سایت sololearn</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-bg-dark">
+                                    <img class="card-img" src="Assets/imgs/Certificates/Html-Certificate.jpg"
+                                        alt="Html-Cer">
+                                    <div class="card-img-back">
+                                        <h5 class="card-title">گواهینامه</h5>
+                                        <p class="card-text">Html</p>
+                                        <p class="card-text">این گواهینامه برای تمام کردن دوره Html.</p>
+                                        <p class="card-text"> از سایت sololearn</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-bg-dark">
+                                    <img class="card-img" src="Assets/imgs/Certificates/Responsive-Certificate.jpg"
+                                        alt="Responsive-Cer">
+                                    <div class="card-img-back">
+                                        <h5 class="card-title">گواهینامه</h5>
+                                        <p class="card-text">Responsive</p>
+                                        <p class="card-text">این گواهینامه برای تمام کردن دوره Responsive.</p>
+                                        <p class="card-text"> از سایت sololearn</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="Assets/sites/pipboy/pipboy.html" target="_blank">
+                                    <div class="card text-bg-dark">
+                                        <img class="card-img" src="Assets/imgs/pipboy.JPG" alt="Responsive-Cer">
+                                        <div class="card-img-back">
+                                            <h5 class="card-title">نمونه کار</h5>
+                                            <span class="card-text">نام Pipboy</span>
+                                            <p class="card-text">این سایت فقط با استفاده از java و css.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="Assets/sites/Microsoft/Microsoft.html" target="_blank">
+                                    <div class="card text-bg-dark">
+                                        <img class="card-img" src="Assets/imgs/microsoft.JPG" alt="Responsive-Cer">
+                                        <div class="card-img-back">
+                                            <h5 class="card-title">نمونه کار</h5>
+                                            <span class="card-text">نام Microsoft</span>
+                                            <p class="card-text">این سایت فقط با استفاده از css.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="Assets/sites/Site-1/index.html" target="_blank">
+                                    <div class="card text-bg-dark">
+                                        <img class="card-img" src="Assets/imgs/site-1.JPG" alt="Responsive-Cer">
+                                        <div class="card-img-back">
+                                            <h5 class="card-title">نمونه کار</h5>
+                                            <span class="card-text">نام site-1</span>
+                                            <p class="card-text">این سایت فقط با استفاده از bootstrap.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="Assets/sites/Site-2/index.html" target="_blank">
+                                    <div class="card text-bg-dark">
+                                        <img class="card-img" src="Assets/imgs/site-2.JPG" alt="Responsive-Cer">
+                                        <div class="card-img-back">
+                                            <h5 class="card-title">نمونه کار</h5>
+                                            <span class="card-text">نام site-2</span>
+                                            <p class="card-text">این سایت فقط با استفاده از bootstrap.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="Assets/sites/Site-3/index.html" target="_blank">
+                                    <div class="card text-bg-dark">
+                                        <img class="card-img" src="Assets/imgs/site-3.JPG" alt="Responsive-Cer">
+                                        <div class="card-img-back">
+                                            <h5 class="card-title">نمونه کار</h5>
+                                            <span class="card-text">نام site-3</span>
+                                            <p class="card-text">این سایت فقط با استفاده از bootstrap.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="Assets/sites/Site-4/index.html" target="_blank">
+                                    <div class="card text-bg-dark">
+                                        <img class="card-img" src="Assets/imgs/site-4.JPG" alt="Responsive-Cer">
+                                        <div class="card-img-back">
+                                            <h5 class="card-title">نمونه کار</h5>
+                                            <span class="card-text">نام site-4</span>
+                                            <p class="card-text">این سایت فقط با استفاده از css.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- contact------------------------------->
+                <footer id="contact" class="container-fluid">
+                    <h1 class="fs-1 mb-3 fw-bold">تماس با من</h1>
+                    <div class="container d-flex ">
+                        <form action="post" class="w-100">
+                            <div class="mb-3 mx-lg-5 me-lg-0">
+                                <label for="mail" class="form-label">آدرس ایمیل</label>
+                                <input type="email" class="form-control text-end" id="mail"
+                                    placeholder="مثال :www.abcd@gmail.com">
+                            </div>
+                            <div class="mb-3 mx-lg-5 me-lg-0">
+                                <label for="Password" class="form-label">متن</label>
+                                <textarea class="form-control text-end" id="Password"
+                                    placeholder=".........."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary p-3 mx-lg-5 mb-5">ارسال</button>
+                        </form>
+                        <img src="Assets/imgs/svgs/Notifications_Flatline.png" alt="notification">
+                    </div>
+                </footer>
+
+                <!-- wave-------------------------->
+                <div class="sticky-bottom wave">
+                    <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave"
+                                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(17, 83, 216 ,0.6)" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(17, 83, 216 ,0.7)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(17, 83, 216 ,0.6)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(17, 83, 216 ,0.7)" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <!-- Gear------------------------->
+            <div class="gear fixed-bottom p-0 z-0">
+                <a href="#info">
+                    <img id="gear" src="Assets/imgs/svgs/spinner.png" alt="gear">
+                    <img id="gear1" class="d-lg-inline d-sm-none" src="Assets/imgs/svgs/spinner2.png" alt="gear">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/java.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+@media (max-width : 930px) {
+    body {
+        background: url(../assets/Pip-boy-full.png)no-repeat center center/100% 100vh;
+        background-attachment: fixed;
+    }
+
+    #display {
+        right: 1rem;
+        left: 2.3rem;
+        width: 94%;
+    }
+
+    #buttons {
+        left: 3%;
+        top: -.5rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .button {
+        width: 10rem;
+        margin-left: 1rem;
+        border-radius: 30%;
+        background-position: -20px;
+    }
+
+    .button {
+        position: relative;
+    }
+
+    .iconbtn {
+        position: absolute;
+        left: -1.5rem;
+    }
+}
+
+@media (max-width : 600px) {
+    #display {
+        right: 1rem;
+        left: 1rem;
+        width: 94%;
+    }
+
+    #hamberger {
+        position: absolute;
+        top: 5rem;
+        right: 2rem;
+        z-index: 5;
+    }
+
+    #hamberger::before {
+        content: '\2630';
+        display: block;
+        font-size: 2rem;
+        height: 2.7rem;
+        width: 2rem;
+        cursor: pointer;
+        color: var(--m-color);
+    }
+
+    #buttons {
+        left: -20rem;
+        bottom: .5rem;
+    }
+
+    .iconbtn {
+        display: none;
+    }
+
+    .button {
+        background: none;
+        background-color: #00000097 !important;
+        border-radius: 10%;
+        width: 4rem;
+        padding: 0;
+
+    }
+
+    .button button {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        color: var(--m-color);
+    }
+
+    .none {
+        display: none !important;
+    }
+
+    .video {
+        grid-template-columns: repeat(2, auto);
+    }
+}

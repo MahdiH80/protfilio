@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Pages/style.css" />
+  <link rel="stylesheet" href="Pages/responsive.css">
+  <title>Mahdi-hosseini</title>
+</head>
+
+<body>
+  <div id="hamberger" class="center">
+    <div id="buttons" class="none">
+      <div class="button">
+        <button>Login</button>
+        <i class="iconbtn"></i>
+      </div>
+  
+      <div class="button">
+        <button>Map</button>
+        <i class="iconbtn"></i>
+      </div>
+  
+      <div class="button">
+        <button>Picture</button>
+        <i class="iconbtn"></i>
+      </div>
+  
+      <div class="button">
+        <button>Video</button>
+        <i class="iconbtn"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+  <div id="display">
+    <div class="load fullscreen"><img src="assets/loading.gif" alt=""></div>
+
+    <section id="start" class="center">
+      <h2>Welcome to System</h2>
+    </section>
+
+
+    <header id="headertop">
+      <div id="headname"></div>
+      <div class="clock">
+        <span id="hour"></span>
+        <span id="min"></span>
+        <span id="sec"></span>
+      </div>
+    </header>
+
+    <div class="Mscroll">
+      <div class="scroll-bar"></div>
+    </div>
+
+    <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+    <section class="login">
+      <div class="scroll">
+        <div class="scroll-back"></div>
+      </div>
+      <div id="sign-in">
+        <form method="post">
+          <br />
+          <h1>SIGN UP</h1>
+          <br /><br />
+          <label for="Name">Name : </label>
+          <input id="Name" type="text" placeholder="Please Enter Your Name"/>
+
+          <label for="age">Age : </label>
+          <input id="age" type="number" placeholder="Please Enter Your Age"/>
+
+          <label for="code">Code Meli : </label>
+          <input id="code" type="number" />
+
+          <label for="tel">Tel : </label>
+          <input id="tel" type="tel" placeholder="+98 939***9429" />
+
+          <label>Email : </label>
+          <input type="email" placeholder="abcde @ email .com" />
+
+          <label>type of membership : </label>
+          <input name="membership" type="radio" /><span> guest</span>
+          <input name="membership" type="radio" /><span> Vip</span>
+          <input name="membership" type="radio" /><span> Members</span>
+
+          <label for="tel">password : </label>
+          <input id="tel" type="tel" placeholder="********" minlength="8" required />
+
+          <input type="submit" value="accept" onclick="check()"/>
+          <input type="reset" value="Reset" />
+        </form>
+      </div>
+
+      <div id="sign-up">
+        <form method="post">
+          <br />
+          <h1>SIGN IN</h1>
+          <br /><br />
+          <label for="Name">Name : </label>
+          <input id="Name" type="text" placeholder="Please Enter Your Name" required />
+          <label for="tel">password : </label>
+          <input id="tel" type="tel" placeholder="********" minlength="8" required />
+          <input type="submit" value="accept" />
+          <input type="reset" value="Reset" />
+        </form>
+      </div>
+    </section>
+
+    <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d138601
+          70.208167119!2d44.6722694089509!3d31.992606879873065!2m3!1f0!2f0!
+          3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef7ec2ec16b1df1%3A0x40b0
+          95d39e51face!2sIran!5e0!3m2!1sen!2s!4v1680543563671!5m2!1sen!2s" width="100%" height="100%"
+        loading="lazy"></iframe>
+    </section>
+
+    <section class="gallery">
+      <div class="img">
+        <img src="assets/imgs/wp9095239-4k-ultra-hd-mountain-wallpapers.jpg" alt="">
+        <img src="assets/imgs/wp6705955-moutains-ultra-hd-wallpapers.jpg" alt="">
+        <img src="assets/imgs/trees_1050x700.webp" alt="">
+        <img src="assets/imgs/60625-Mountain-4k-Ultra-HD-Wallpaper.jpg" alt="">
+      </div>
+      <div class="miniimg">
+        <img src="assets/imgs/wp9095239-4k-ultra-hd-mountain-wallpapers.jpg" alt="">
+        <img src="assets/imgs/wp6705955-moutains-ultra-hd-wallpapers.jpg" alt="">
+        <img src="assets/imgs/trees_1050x700.webp" alt="">
+        <img src="assets/imgs/60625-Mountain-4k-Ultra-HD-Wallpaper.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="video center">
+
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <div class="btn close"></div>
+        <div class="btn full"></div>
+        <video controls>
+          <source src="assets/videos/Welcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+    </section>
+
+    <footer>
+      <hr>
+      <ul>
+        <li>
+          <p>Name :Mahdi</p>
+        </li>
+        <li>
+          <p>Tell :09395***429</p>
+        </li>
+        <li>
+          <p>Co :M H</p>
+        </li>
+        <li>
+          <p>email :Mahdi.abiz1395@gmail.com</p>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+    <div class="extras"></div>
+  </div>
+
+  <script src="Pages/java.js"></script>
+</body>
+
+</html>

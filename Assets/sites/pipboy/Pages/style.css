@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'digital';
+    src: url(../assets/fonts/digital-7-webfont.woff2) format('woff2'),
+        url(../assets/fonts/digital-7-webfont.woff) format('woff');
+}
+
+:root {
+    --dis-backg: radial-gradient(green, black);
+    --m-color: greenyellow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../assets/Pip-boy.png)no-repeat center center/100% 100vh;
+    background-attachment: fixed;
+    margin-top: -2px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    font-family: digital;
+    padding: 5px;
+}
+
+.fullscreen {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.Mscroll {
+    width: 100%;
+    height: 5px;
+    background-color: #d1d1d1;
+}
+
+.scroll-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(184, 2, 216), rgb(255, 0, 43));
+}
+
+/* btn video */
+.btn {
+    z-index: 1;
+    cursor: pointer;
+    display: inline-block;
+    top: 1.3rem;
+    width: 20px;
+    height: 17px;
+}
+
+.close {
+    left: 50.5%;
+    background-color: #f00000;
+    border-radius: 0 0 0 50%;
+}
+
+.full {
+    right: 50.5%;
+    background-color: #00900a;
+    border-radius: 0 0 50% 0;
+}
+
+/* loading */
+.load {
+    text-align: center;
+}
+
+/* ------------------------buttons-------------------------------- */
+#buttons {
+    position: absolute;
+    left: 3%;
+    bottom: 1rem;
+}
+
+.button {
+    background: url(../assets/Pip-boy-buttons.png) center/cover;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: .3rem;
+    height: 3rem;
+    width: 14rem;
+}
+
+.button button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+    padding-right: 5rem;
+}
+
+.iconbtn {
+    margin: 10px 0 0 25px;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: red;
+    box-shadow: red 0 0 10px 10px;
+    visibility: hidden;
+}
+
+/* ---------------------display----------------------------- */
+#display {
+    position: absolute;
+    right: 1.5rem;
+    top: 3.8rem;
+    height: 41rem;
+    width: 70%;
+    background: var(--dis-backg);
+    color: var(--m-color);
+    font-family: 'digital';
+}
+
+/* ------------------------start--------------------------- */
+#start {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    font-size: 50px;
+    background: radial-gradient(green, black);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: .2rem;
+}
+
+/* --------------------header-------------------------------- */
+#headertop {
+    line-height: 90px;
+    font-size: 29px;
+    text-align: center;
+    height: 5rem;
+}
+
+.clock {
+    position: absolute;
+    left: 2rem;
+    top: 0;
+}
+
+/* ----------------------section------------------------------ */
+section {
+    position: relative;
+    display: none;
+    text-align: center;
+    overflow: hidden;
+    height: 30.5rem;
+    padding: 0px;
+    width: 100%;
+}
+
+/* ------------------login------------------ */
+.login {
+    justify-content: space-evenly;
+}
+
+/* ------------------gallery---------------- */
+.gallery {
+    grid-template-columns: 80% 20%;
+}
+
+.img {
+    overflow: auto;
+}
+
+.img img {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.img::-webkit-scrollbar {
+    display: none;
+}
+
+.miniimg img {
+    border: #000 solid 5px;
+    height: 7.5rem;
+    width: 100%;
+}
+
+.miniimg:hover {
+    cursor: pointer;
+}
+
+/* ------------------video------------------ */
+.video {
+    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
+    padding: 0 1rem;
+    overflow: auto;
+}
+
+.video::-webkit-scrollbar {
+    display: none;
+}
+
+.video .btn {
+    position: relative;
+}
+
+.video video {
+    height: 100%;
+    width: 100%;
+}
+
+/* ---------------------footer------------------- */
+footer {
+    position: absolute;
+    color: var(--m-color);
+    width: 100%;
+    height: 5rem;
+    bottom: 0;
+}
+
+footer ul {
+    padding: 10px;
+}
+
+footer li:last-child:hover {
+    position: absolute;
+    padding: 0 1rem 1rem 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* --------------------extras------------------ */
+.extras {
+    position: absolute;
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+}
