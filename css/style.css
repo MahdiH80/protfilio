@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    cursor: none !important;
+    cursor: auto !important;
 }
 
 @font-face {
@@ -335,6 +335,10 @@ h1 {
 
 /* large ------------------------------------- */
 @media (min-width:990px) {
+    * {
+        cursor: none !important;
+    }
+
     body {
         overflow: hidden;
     }
